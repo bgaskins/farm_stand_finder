@@ -4,12 +4,19 @@ import FarmStandService from '../Services/FarmStandService';
 import FarmStand from '../Components/FarmStand';
 
 
+/* 
+  Renders the list of farm stands on home page and handles user interactions like 
+  Create, Update, Delete
+
+  Uses FarmStandService to perform API requests
+*/
+
 
 export default function Home() {
   // State hook to manage the list of farm stands
   const [farmStands, setFarmStands] = useState([]);
 
-  // useEffect hook to fetch farm stand data when the component mounts
+  // useEffect hook is used to fetch farm stand data when the component mounts
   useEffect(() => {
     // Call the getAllFarmStands method from FarmStandService to fetch data
     FarmStandService().getAllFarmStands()

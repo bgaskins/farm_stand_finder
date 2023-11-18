@@ -3,22 +3,28 @@ import { useParams } from 'react-router-dom';
 import FarmStandService from '../Services/FarmStandService';
 import FarmStand from '../Components/FarmStand'; 
 
+/*
+
+Fetches farm stand data based off of the farm stand ID parameter from the URL and
+renders the data
+
+*/
+
+
 export default function FarmStandDetails() {
    // Extract 'id' parameter from the URL using the useParams hook
    const { id } = useParams();
    // State variable to hold farm stand data
    const [farmStand, setFarmStand] = useState(null);
  
-   // Use useEffect to fetch farm stand data 
-   useEffect(() => {
-     // Fetch farm stand data based on the 'id' parameter from the URL
+     // Fetch farm stand data with useEffect based on the 'id' parameter from the URL
+     useEffect(() => {
      FarmStandService.getFarmStandById(id)  
        .then(data => {
-         // Set the fetched farm stand data to the FarmStand component
          setFarmStand(data);
        })
        .catch(error => console.error('Error fetching data:', error)); // Fetch process errors
-   }, [id]); // Effect is reinvoked so it runs again when the 'id' changes in the URL
+   }, [id]);
  
    // If farmStand data is not available yet, display a loading message/spinner
    if (!farmStand) {

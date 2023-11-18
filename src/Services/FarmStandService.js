@@ -1,5 +1,10 @@
 /* 
 
+-Handles API requests related to the farm stands. Contains logic for CRUD operations.
+- Utilized by Home and FarmSTandDetailsPage components
+
+Methods with API endpoints:
+
 getAllFarmStands: Fetches all farm stands from the API
 getFarmStandById: Get a specific farm stand by ID from the API
 createFarmStand: Creates a new farm stand
