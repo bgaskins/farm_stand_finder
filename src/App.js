@@ -8,9 +8,13 @@ import Help from './Pages/Help';
 
 /* 
 
+- Use React Router and have at least 3 pages using React Bootstrap or an \alternative styling library
+- Contain at least 10 components
+- Allow for all CRUD operations
+
 Components: 
 1. Navbar 
-2. FarmStandGrid 
+2. FarmStandList
 3. FarmStandCard 
 4. Search Bar 
 5. Map 
@@ -18,7 +22,7 @@ Components:
 7. LoadingSpinner 
 8. ErrorComponent 
 9. FarmStandDetails 
-10. ViewMapButton
+10. FarmStand
 
 Pages:
 1. Home
@@ -29,6 +33,7 @@ Services:
 1. FarmStandService
 
 */
+
 export default function App() {
   return (
      // Use the Router component for client-side routing

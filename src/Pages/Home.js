@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import FarmStandService from '../Services/FarmStandService';
 import FarmStand from '../Components/FarmStand';
 
@@ -97,6 +97,7 @@ export default function Home() {
           </Col>
         ))}
       </Row>
+      <Button variant="primary" onClick={createFarmStand}>Create New Farm Stand</Button>
     </Container>
   );
 }
