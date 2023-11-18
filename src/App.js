@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import FarmStandList from './Components/FarmStandList';
 import Navbar from './Components/Navbar';
-import FarmStandDetailsPage from './Pages/FarmStandDetailsPage'
 import Home from './Pages/Home';
 import Help from './Pages/Help';
-import './App.css';
 
 /* 
 
@@ -31,15 +31,22 @@ Services:
 */
 export default function App() {
   return (
-    <Router>
-      <div className="app">
-        <Navbar />
-        <Switch>
-          <Route path="/" exact component={Home} key="home" />
-          <Route path="/farm-stand/:id" exact component={FarmStandDetailsPage} key="farm-stand-details" />
-          <Route path="/help" exact component={Help} key="help" />
-        </Switch>
-      </div>
-    </Router>
+     // Use the Router component for client-side routing
+     <Router>
+     {/* Main container div for the entire application */}
+     <div className="app">
+       {/* Navbar component for navigation */}
+       <Navbar />
+       {/* Switch component to render only the first matching Route */}
+       <Switch>
+         {/* Route for the main page, rendering the Home component */}
+         <Route path="/" exact component={Home} />
+         {/* Route for displaying detailed farm stand information, using FarmStandDetails component */}
+         <Route path="/farm-stands" exact component={FarmStandList} />
+         {/* Route for the help page, rendering the Help component */}
+         <Route path="/help" exact component={Help} />
+       </Switch>
+     </div>
+   </Router>
   );
 }
