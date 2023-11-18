@@ -22,7 +22,7 @@ export default function FarmStandDetails() {
  
    // If farmStand data is not available yet, display a loading message/spinner
    if (!farmStand) {
-     return <div>Loading...</div>;
+     return <div>One moment...</div>;
    }
  
    return (

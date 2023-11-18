@@ -1,19 +1,27 @@
 import React from 'react';
+import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-
-
-export default function Navbar () {
-    console.log('Navbar rendered');
-    return (
-        // Navigation element containing links to different routes
-        <nav>
-            {/* Link to the Home route */}
-            <Link to="/">Home</Link>
-            {/* Link to the Help route */}
-            <Link to="/help">Help</Link>
-            {/* Link to the Farm Stand info route */}
-            <Link to="/farm-stands">Farm Stands</Link>
-        </nav>
-    )
+export default function CustomNavbar() {
+  return (
+    <Navbar bg="light" expand="lg">
+      <Navbar.Brand as={Link} to="/">Farm Stand Finder</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="ml-auto">
+          <Nav.Item>
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={Link} to="/help">Help</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={Link} to="/farm-stands">Farm Stands</Nav.Link>
+          </Nav.Item>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  );
 }
+
+

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import FarmStandService from '../Services/FarmStandService';
 import FarmStand from '../Components/FarmStand';
 
@@ -78,17 +78,18 @@ export default function Home() {
 
   // Render the Home component with a list of farm stands and a button to create a new farm stand
   return (
-    <div className="home">
-      <h2>Home</h2>
-      {farmStands.map(farmStand => (
-        <FarmStand
-          key={farmStand.id}
-          data={farmStand}
-          updateFarmStand={updateFarmStand}
-          deleteFarmStand={deleteFarmStand}
-        />
-      ))}
-      <Button variant="primary" onClick={createFarmStand}>Create New Farm Stand</Button>
-    </div>
+    <Container style={{marginTop: '20px', marginBottom: '20px' }}>
+      <Row>
+        {farmStands.map(farmStand => (
+          <Col style={{margin: '5px' }} key={farmStand.id} xs={12} md={6} lg={4}>
+            <FarmStand
+              data={farmStand}
+              updateFarmStand={updateFarmStand}
+              deleteFarmStand={deleteFarmStand}
+            />
+          </Col>
+        ))}
+      </Row>
+    </Container>
   );
 }

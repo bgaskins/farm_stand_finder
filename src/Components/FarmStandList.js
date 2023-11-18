@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Table } from 'react-bootstrap';
 import FarmStandService from '../Services/FarmStandService';
 
 export default function FarmStandList() {
@@ -19,7 +20,7 @@ export default function FarmStandList() {
   return (
     <div>
       <h1>Farm Stand List</h1>
-      <table>
+      <Table striped bordered hover responsive>
         <thead>
           <tr>
             <th>Stand Name</th>
@@ -40,7 +41,7 @@ export default function FarmStandList() {
             </tr>
           ))}
         </tbody>
-      </table>
+      </Table>
     </div>
   );
 }

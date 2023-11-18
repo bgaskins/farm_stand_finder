@@ -1,18 +1,19 @@
 import React from 'react';
+import { Card } from 'react-bootstrap';
 import FarmStandCard from './FarmStandCard';
-import FarmStandDetails from './FarmStandDetails';
-
+import FarmStandDetails from './FarmStandDetails'; 
 
 export default function FarmStand({ data, updateFarmStand, deleteFarmStand }) {
   return (
-    <div className="farm-stand">
-      {/* Render the FarmStandCard component to display image and name */}
+    <Card style={{width: '20rem', height: '38rem', margin: '10px', borderRadius: '10px 10px 0 0', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',}}>
       <FarmStandCard data={data} />
-      {/* Render the FarmStandDetails component to display detailed farm stand info,
-      passing data, updateFarmStand, and deleteFarmStand as props */}
-      <FarmStandDetails data={data} updateFarmStand={updateFarmStand} deleteFarmStand={deleteFarmStand} />
-    </div>
+      <Card.Body style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '24rem', borderRadius: '10px', boxShadow: '10px',}}>
+        <FarmStandDetails data={data} updateFarmStand={updateFarmStand} deleteFarmStand={deleteFarmStand} />
+      </Card.Body>
+    </Card>
   );
 }
+
+
 
 
