@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function FarmStandCard({ data }) {
   return (
@@ -7,10 +7,21 @@ export default function FarmStandCard({ data }) {
       <img
         src={data.food}
         alt={data.standName} // Alt text with farm stand Name
-        style={{ width: '100%', height: 'auto', maxHeight: '400px',}}
+        style={{ width: "100%", height: "auto", maxHeight: "400px" }}
       />
       {/* Farm stand name */}
-      <h3 style={{ color: '#007BFF', textAlign: 'center', margin: '20px', fontSize: '18px', maxWidth: '400px', overflow: 'hidden'}}>{data.standName} Farm Stand</h3>
+      <h3
+        style={{
+          color: "#007BFF",
+          textAlign: "center",
+          margin: "20px",
+          fontSize: "18px",
+          maxWidth: "400px",
+          overflow: "hidden",
+        }}
+      >
+        {data.standName} Farm Stand
+      </h3>
     </div>
   );
 }
