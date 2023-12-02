@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import FarmStandCard from "./FarmStandCard";
+import FarmStandCard from "./CardContent";
 import FarmStandDetails from "./FarmStandEdit";
 
 export default function FarmStand({ data, updateFarmStand, deleteFarmStand }) {
@@ -12,6 +12,7 @@ export default function FarmStand({ data, updateFarmStand, deleteFarmStand }) {
         margin: "10px",
         borderRadius: "10px 10px 0 0",
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        overflow: "hidden",
       }}
     >
       <FarmStandCard data={data} />
@@ -19,10 +20,9 @@ export default function FarmStand({ data, updateFarmStand, deleteFarmStand }) {
         style={{
           display: "flex",
           flexDirection: "column",
-          alignItems: "flex-start",
-          width: "24rem",
-          borderRadius: "10px",
-          boxShadow: "10px",
+          width: "100%",
+          padding: "10px",
+          overflowY: "hidden",
         }}
       >
         <FarmStandDetails

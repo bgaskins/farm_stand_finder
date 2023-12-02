@@ -81,10 +81,10 @@ export default function Home() {
   // Render the Home component with a list of farm stands and a button to create a new farm stand
   return (
     <Container style={{ marginTop: "20px", marginBottom: "20px" }}>
-      <Row>
+      <Row style={{ justifyContent: "center", margin: "5px" }}>
         {farmStands.map((farmStand) => (
           <Col
-            style={{ margin: "5px" }}
+            style={{ margin: "15px" }}
             key={farmStand.id}
             xs={12}
             md={6}

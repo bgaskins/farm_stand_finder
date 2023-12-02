@@ -41,7 +41,7 @@ export default function FarmStandEdit({
 
   return (
     <div className="farm-stand-details">
-      <h5 style={{ textAlign: "center" }}>Farm Stand Details</h5>
+      <h5>Farm Stand Details</h5>
 
       {/* Conditional rendering based on the edit/update mode */}
       {editMode ? (
