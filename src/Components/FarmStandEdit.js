@@ -40,7 +40,7 @@ export default function FarmStandEdit({
   };
 
   return (
-    <div className="farm-stand-details">
+    <div className="farm-stand-details" style={{ maxHeight: "12px" }}>
       <h5>Farm Stand Details</h5>
 
       {/* Conditional rendering based on the edit/update mode */}
@@ -83,7 +83,7 @@ export default function FarmStandEdit({
             />
           </Form.Group>
 
-          {/* Buttons for updating and canceling the edit mode */}
+          {/* UPDATE And CANCEL choice */}
           <Button
             style={{ marginTop: "10px" }}
             variant="dark"
@@ -111,7 +111,7 @@ export default function FarmStandEdit({
             </p>
           </div>
 
-          {/* Buttons for entering edit mode, updating, and deleting */}
+          {/* EDIT and DELETE*/}
           <Button
             style={{ marginTop: "24px" }}
             variant="dark"

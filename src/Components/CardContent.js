@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function FarmStandCard({ data }) {
+export default function CardContent({ data }) {
   return (
     <div>
       {/* Farm stand image of choice */}
@@ -10,18 +10,28 @@ export default function FarmStandCard({ data }) {
         style={{ width: "100%", height: "auto", maxHeight: "240px" }}
       />
       {/* Farm stand name */}
-      <h3
+      <div>
+        <h3
+          style={{
+            color: "#007BFF",
+            textAlign: "center",
+            margin: "20px",
+            fontSize: "18px",
+            maxWidth: "400px",
+            overflow: "hidden",
+          }}
+        >
+          {/* Farm stand name from API */}
+          {data.standName} Farm Stand
+        </h3>
+      </div>
+      <div
         style={{
-          color: "#007BFF",
           textAlign: "center",
-          margin: "20px",
-          fontSize: "18px",
-          maxWidth: "400px",
-          overflow: "hidden",
         }}
       >
-        {data.standName} Farm Stand
-      </h3>
+        <h5>Farm Stand Details</h5>
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import FarmStandService from "../Services/FarmStandService";
-import FarmStand from "../Components/FarmStand";
+import FarmStand from "../Components/FarmStandCard";
 
 /* 
   Renders the list of farm stands on home page and handles user interactions like 
@@ -84,7 +84,7 @@ export default function Home() {
       <Row style={{ justifyContent: "center", margin: "5px" }}>
         {farmStands.map((farmStand) => (
           <Col
-            style={{ margin: "15px" }}
+            style={{ margin: "10px" }}
             key={farmStand.id}
             xs={12}
             md={6}

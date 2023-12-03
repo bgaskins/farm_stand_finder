@@ -5,6 +5,7 @@ import FarmStandList from "./Components/FarmStandList";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Help from "./Pages/Help";
+import Footer from "./Components/Footer";
 
 /* 
 
@@ -51,6 +52,7 @@ export default function App() {
           {/* Route for the help page, rendering the Help component */}
           <Route path="/help" exact component={Help} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
