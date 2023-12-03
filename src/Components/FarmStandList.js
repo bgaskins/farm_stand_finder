@@ -7,7 +7,7 @@ export default function FarmStandList() {
   const [farmStands, setFarmStands] = useState([]);
 
   useEffect(() => {
-    farmStandService()
+    farmStandService
       .getAllFarmStands()
       .then((data) => {
         console.log("Farm Stands Data:", data);

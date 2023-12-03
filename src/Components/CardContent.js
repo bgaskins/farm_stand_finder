@@ -13,7 +13,7 @@ export default function CardContent({ data }) {
       <div>
         <h3
           style={{
-            color: "#007BFF",
+            color: "#AB5B84",
             textAlign: "center",
             margin: "20px",
             fontSize: "18px",

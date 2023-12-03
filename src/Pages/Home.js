@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import FarmStandService from "../Services/FarmStandService";
-import FarmStand from "../Components/FarmStandCard";
+import FarmStandCard from "../Components/FarmStandCard";
+import CreateCard from "../Components/CreateCard";
 
 /* 
   Renders the list of farm stands on home page and handles user interactions like 
@@ -25,28 +26,6 @@ export default function Home() {
       })
       .catch((error) => console.error("Error fetching data:", error)); // Handle errors during the fetch process
   }, []);
-
-  //========= CREATE ===========
-  // Function to create a new farm stand
-  const createFarmStand = async () => {
-    try {
-      // Construct a new farm stand object with default values
-      const newFarmStand = {
-        food: "New Food",
-        location: "New Location",
-        address: "New Address",
-        standName: "New Stand Name",
-      };
-
-      // Call the createFarmStand method from FarmStandService to add the new farm stand
-      await FarmStandService().createFarmStand(newFarmStand);
-      const updatedData = await FarmStandService().getAllFarmStands();
-      // Update the state with the modified farm stand data
-      setFarmStands(updatedData);
-    } catch (error) {
-      console.error("Error creating farm stand:", error);
-    }
-  };
 
   //========= UPDATE ===========
   // Function to update an existing farm stand
@@ -84,13 +63,13 @@ export default function Home() {
       <Row style={{ justifyContent: "center", margin: "5px" }}>
         {farmStands.map((farmStand) => (
           <Col
-            style={{ margin: "10px" }}
+            style={{ margin: "5px" }}
             key={farmStand.id}
             xs={12}
             md={6}
             lg={4}
           >
-            <FarmStand
+            <FarmStandCard
               data={farmStand}
               updateFarmStand={updateFarmStand}
               deleteFarmStand={deleteFarmStand}
@@ -98,9 +77,7 @@ export default function Home() {
           </Col>
         ))}
       </Row>
-      <Button variant="primary" onClick={createFarmStand}>
-        Create New Farm Stand
-      </Button>
+      <CreateCard />
     </Container>
   );
 }

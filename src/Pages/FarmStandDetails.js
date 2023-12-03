@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import FarmStandService from "../Services/FarmStandService";
-import FarmStand from "../Components/FarmStandCard";
+import FarmStand from "../Components/FarmStand";
 
 /*
 
