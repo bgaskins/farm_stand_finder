@@ -13,7 +13,7 @@ export default function CardContent({ data }) {
       <div>
         <h3
           style={{
-            color: "#AB5B84",
+            color: "#006e5e",
             textAlign: "center",
             margin: "20px",
             fontSize: "18px",
@@ -29,9 +29,7 @@ export default function CardContent({ data }) {
         style={{
           textAlign: "center",
         }}
-      >
-        <h5>Farm Stand Details</h5>
-      </div>
+      ></div>
     </div>
   );
 }

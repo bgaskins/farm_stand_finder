@@ -85,15 +85,17 @@ export default function FarmStandEdit({
 
           {/* UPDATE And CANCEL choice */}
           <Button
-            style={{ marginTop: "10px" }}
-            variant="dark"
+            style={{ marginTop: "10px", backgroundColor: "#006e5e" }}
             onClick={handleUpdate}
           >
             Update
           </Button>
           <Button
-            style={{ marginTop: "10px", marginLeft: "10px" }}
-            variant="dark"
+            style={{
+              marginTop: "10px",
+              marginLeft: "10px",
+              backgroundColor: "#006e5e",
+            }}
             onClick={() => setEditMode(false)}
           >
             Cancel
@@ -101,7 +103,8 @@ export default function FarmStandEdit({
         </Form>
       ) : (
         <>
-          {/* Display location and address */}
+          {/* FARM STAND DETAILS -- BOTTOM OF CARD */}
+          {/* Display farm stand location and address */}
           <div style={{ padding: "5px" }}>
             <p>
               <strong>Location:</strong> {data.location}
@@ -113,15 +116,17 @@ export default function FarmStandEdit({
 
           {/* EDIT and DELETE*/}
           <Button
-            style={{ marginTop: "24px" }}
-            variant="dark"
+            style={{ marginTop: "24px", backgroundColor: "#006e5e" }}
             onClick={() => setEditMode(true)}
           >
             Edit
           </Button>
           <Button
-            style={{ marginTop: "24px", marginLeft: "10px" }}
-            variant="dark"
+            style={{
+              marginTop: "24px",
+              marginLeft: "10px",
+              backgroundColor: "#006e5e",
+            }}
             onClick={handleDelete}
           >
             Delete

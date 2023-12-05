@@ -6,6 +6,7 @@ import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Help from "./Pages/Help";
 import Footer from "./Components/Footer";
+import FarmStandDirectory from "./Pages/FarmStandDirectory";
 
 /* 
 
@@ -48,7 +49,7 @@ export default function App() {
           {/* Route for the main page, rendering the Home component */}
           <Route path="/" exact component={Home} />
           {/* Route for displaying detailed farm stand information, using FarmStandDetails component */}
-          <Route path="/farm-stands" exact component={FarmStandList} />
+          <Route path="/farm-stands" exact component={FarmStandDirectory} />
           {/* Route for the help page, rendering the Help component */}
           <Route path="/help" exact component={Help} />
         </Switch>

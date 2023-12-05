@@ -19,7 +19,6 @@ export default function FarmStandList() {
   // Table of farm stand information
   return (
     <div>
-      <h1>Farm Stand List</h1>
       <Table striped bordered hover responsive>
         <thead>
           <tr>
@@ -41,7 +40,7 @@ export default function FarmStandList() {
                 <img
                   src={farmStand.food}
                   alt="Food"
-                  style={{ width: "100px", height: "auto" }}
+                  style={{ width: "100px", height: "100px" }}
                 />
               </td>
             </tr>

@@ -63,7 +63,7 @@ export default function Home() {
       <Row style={{ justifyContent: "center", margin: "5px" }}>
         {farmStands.map((farmStand) => (
           <Col
-            style={{ margin: "5px" }}
+            style={{ margin: "10px" }}
             key={farmStand.id}
             xs={12}
             md={6}
@@ -77,7 +77,9 @@ export default function Home() {
           </Col>
         ))}
       </Row>
-      <CreateCard />
+      <div className="text-center">
+        <CreateCard />
+      </div>
     </Container>
   );
 }
