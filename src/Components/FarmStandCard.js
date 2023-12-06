@@ -1,6 +1,7 @@
-import React from "react";
-import { Card } from "react-bootstrap";
+import React, { useState } from "react";
+import { Card, Button } from "react-bootstrap";
 import CardContent from "./CardContent";
+import FarmStandModal from "./FarmStandModal";
 import FarmStandEdit from "./FarmStandEdit";
 
 export default function FarmStandCard({
@@ -8,6 +9,9 @@ export default function FarmStandCard({
   updateFarmStand,
   deleteFarmStand,
 }) {
+  const [modalShow, setModalShow] = useState(false);
+  console.log("FarmStandCard Data:", data);
+
   return (
     <Card
       style={{
@@ -35,7 +39,22 @@ export default function FarmStandCard({
           updateFarmStand={updateFarmStand}
           deleteFarmStand={deleteFarmStand}
         />
+        <Button
+          variant="secondary"
+          style={{ marginTop: "10px" }}
+          onClick={() => setModalShow(true)}
+        >
+          View More
+        </Button>
       </Card.Body>
+
+      {/* Farm Stand Details Modal */}
+      <FarmStandModal
+        data={data}
+        updateFarmStand={updateFarmStand}
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
     </Card>
   );
 }

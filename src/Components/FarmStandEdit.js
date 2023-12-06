@@ -41,8 +41,6 @@ export default function FarmStandEdit({
 
   return (
     <div className="farm-stand-details" style={{ maxHeight: "12px" }}>
-      <h5>Farm Stand Details</h5>
-
       {/* Conditional rendering based on the edit/update mode */}
       {editMode ? (
         <Form>
@@ -103,17 +101,6 @@ export default function FarmStandEdit({
         </Form>
       ) : (
         <>
-          {/* FARM STAND DETAILS -- BOTTOM OF CARD */}
-          {/* Display farm stand location and address */}
-          <div style={{ padding: "5px" }}>
-            <p>
-              <strong>Location:</strong> {data.location}
-            </p>
-            <p>
-              <strong>Address:</strong> {data.address}
-            </p>
-          </div>
-
           {/* EDIT and DELETE*/}
           <Button
             style={{ marginTop: "24px", backgroundColor: "#006e5e" }}

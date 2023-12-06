@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import FarmStandService from "../Services/FarmStandService";
 import FarmStandCard from "../Components/FarmStandCard";
 import CreateCard from "../Components/CreateCard";
+import FarmStandModal from "../Components/FarmStandModal";
 
 /* 
   Renders the list of farm stands on home page and handles user interactions like 
