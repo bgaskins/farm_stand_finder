@@ -31,10 +31,10 @@ export default function CreateFarmStandModal({
       <Modal.Body>
         <Form>
           <Form.Group controlId="formFood">
-            <Form.Label>Food</Form.Label>
+            <Form.Label>Farm Stand Image</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Enter food"
+              placeholder="Enter image url"
               name="food"
               value={newFarmStand.food}
               onChange={handleInputChange}

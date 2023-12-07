@@ -30,7 +30,7 @@ export default function FarmStandModal({
 
   const handleDelete = async () => {
     try {
-      await deleteFarmStand(farmStandData.id);
+      await deleteFarmStand(data.id);
       onHide(); // Close the modal after deletion
     } catch (error) {
       console.error("Error deleting farm stand:", error);

@@ -16,7 +16,7 @@ export default function FarmStandCard({
     <Card
       style={{
         width: "20rem",
-        height: "34rem",
+        height: "25rem",
         margin: "10px",
         borderRadius: "10px 10px 10px 10px",
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
@@ -29,29 +29,31 @@ export default function FarmStandCard({
         style={{
           display: "flex",
           flexDirection: "column",
+          justifyContent: "space-between",
           width: "100%",
           padding: "10px",
-          overflowY: "scroll",
         }}
       >
-        <FarmStandEdit
-          data={data}
-          updateFarmStand={updateFarmStand}
-          deleteFarmStand={deleteFarmStand}
-        />
+        {/* View More button to trigger the farm stand details 
+      modal with edit/update/delete operations*/}
         <Button
           variant="secondary"
-          style={{ marginTop: "10px" }}
+          style={{
+            marginTop: "auto",
+            border: "none",
+            backgroundColor: "#dc5a23",
+          }}
           onClick={() => setModalShow(true)}
         >
           View More
         </Button>
       </Card.Body>
 
-      {/* Farm Stand Details Modal */}
+      {/* Farm Stand Details modal */}
       <FarmStandModal
         data={data}
         updateFarmStand={updateFarmStand}
+        deleteFarmStand={deleteFarmStand}
         show={modalShow}
         onHide={() => setModalShow(false)}
       />

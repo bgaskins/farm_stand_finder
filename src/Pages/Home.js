@@ -3,7 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import FarmStandService from "../Services/FarmStandService";
 import FarmStandCard from "../Components/FarmStandCard";
 import CreateCard from "../Components/CreateCard";
-import FarmStandModal from "../Components/FarmStandModal";
+import Cloud from "../Components/Cloud";
 
 /* 
   Renders the list of farm stands on home page and handles user interactions like 
@@ -61,6 +61,15 @@ export default function Home() {
   // Render the Home component with a list of farm stands and a button to create a new farm stand
   return (
     <Container style={{ marginTop: "20px", marginBottom: "20px" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Cloud />
+      </div>
       <Row style={{ justifyContent: "center", margin: "5px" }}>
         {farmStands.map((farmStand) => (
           <Col
@@ -79,7 +88,7 @@ export default function Home() {
         ))}
       </Row>
       <div className="text-center">
-        <CreateCard />
+        <CreateCard updateFarmStand={updateFarmStand} />
       </div>
     </Container>
   );

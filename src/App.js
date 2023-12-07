@@ -38,19 +38,17 @@ Services:
 
 export default function App() {
   return (
-    // Use the Router component for client-side routing
     <Router>
-      {/* Main container div for the entire application */}
       <div className="app">
         {/* Navbar component for navigation */}
         <Navbar />
-        {/* Switch component to render only the first matching Route */}
+        {/* Switch component to render the first matching Route */}
         <Switch>
-          {/* Route for the main page, rendering the Home component */}
+          {/* Home page component */}
           <Route path="/" exact component={Home} />
-          {/* Route for displaying detailed farm stand information, using FarmStandDetails component */}
+          {/* Farm Stand Directory component */}
           <Route path="/farm-stands" exact component={FarmStandDirectory} />
-          {/* Route for the help page, rendering the Help component */}
+          {/* Help page component */}
           <Route path="/help" exact component={Help} />
         </Switch>
         <Footer />

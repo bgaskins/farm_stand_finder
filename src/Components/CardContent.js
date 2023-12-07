@@ -7,7 +7,7 @@ export default function CardContent({ data }) {
       <img
         src={data.food}
         alt={data.standName} // Alt text with farm stand Name
-        style={{ width: "100%", height: "auto", maxHeight: "240px" }}
+        style={{ width: "100%", height: "100%", maxHeight: "240px" }}
       />
       {/* Farm stand name */}
       <div>
