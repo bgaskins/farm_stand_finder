@@ -1,4 +1,5 @@
 import React from "react";
+import OpenClosedStatus from "./OpenClosedStatus";
 
 export default function CardContent({ data }) {
   return (
@@ -7,8 +8,14 @@ export default function CardContent({ data }) {
       <img
         src={data.food}
         alt={data.standName} // Alt text with farm stand Name
-        style={{ width: "100%", height: "100%", maxHeight: "240px" }}
+        style={{
+          width: "100%",
+          height: "100%",
+          maxHeight: "240px",
+          borderRadius: "10px 10px 0 0",
+        }}
       />
+      <OpenClosedStatus />
       {/* Farm stand name */}
       <div>
         <h3

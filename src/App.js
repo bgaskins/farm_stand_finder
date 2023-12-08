@@ -1,7 +1,8 @@
 import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import FarmStandList from "./Components/FarmStandList";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faCircle, faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Help from "./Pages/Help";
@@ -37,6 +38,8 @@ Services:
 */
 
 export default function App() {
+  library.add(faCircle);
+
   return (
     <Router>
       <div className="app">

@@ -1,3 +1,8 @@
 body{
     background-color: #ace1fb;
+    color: white;
+}
+
+.nav-link {
+    color: white;
 }

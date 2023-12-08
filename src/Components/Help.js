@@ -1,9 +1,9 @@
 import React from "react";
 
 export default function ErrorComponent() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div className="help-information">
+      <Help />
+    </div>
+  );
 }

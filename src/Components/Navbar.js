@@ -4,12 +4,16 @@ import { Link } from "react-router-dom";
 
 export default function CustomNavbar() {
   return (
-    <Navbar bg="#ace1fb" expand="lg">
+    <Navbar expand="lg">
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav
           className="nav-links"
-          style={{ display: "flex", marginLeft: "auto", marginRight: "40px" }}
+          style={{
+            display: "flex",
+            marginLeft: "auto",
+            marginRight: "40px",
+          }}
         >
           <Nav.Item>
             <Nav.Link as={Link} to="/">

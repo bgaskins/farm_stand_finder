@@ -3,7 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import FarmStandService from "../Services/FarmStandService";
 import FarmStandCard from "../Components/FarmStandCard";
 import CreateCard from "../Components/CreateCard";
-import Cloud from "../Components/Cloud";
+import CloudHeader from "../Components/CloudHeader";
 
 /* 
   Renders the list of farm stands on home page and handles user interactions like 
@@ -68,7 +68,7 @@ export default function Home() {
           alignItems: "center",
         }}
       >
-        <Cloud />
+        <CloudHeader />
       </div>
       <Row style={{ justifyContent: "center", margin: "5px" }}>
         {farmStands.map((farmStand) => (

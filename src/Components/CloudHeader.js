@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Cloud() {
+export default function CloudHeader() {
   return (
     <>
       <div
@@ -110,8 +110,8 @@ export default function Cloud() {
         <h2
           style={{
             margin: "20px",
-            fontSize: "35px",
-            fontFamily: "'Patua One', serif",
+            fontSize: "45px",
+            fontFamily: "'Cabin Sketch', sans-serif",
             color: "#A58767",
           }}
         >
