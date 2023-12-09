@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 
-export default function CreateFarmStandModal({
+export default function CreateModal({
   showModal,
   handleClose,
   createFarmStand,
 }) {
+  const history = useHistory();
+
   const [newFarmStand, setNewFarmStand] = useState({
     food: "",
     location: "",
@@ -21,8 +23,8 @@ export default function CreateFarmStandModal({
 
   const handleCreateFarmStand = () => {
     createFarmStand(newFarmStand);
-    history.push("/"); // Redirects to home
     handleClose();
+    history.push("/"); // Redirects to home
   };
 
   return (

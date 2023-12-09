@@ -4,7 +4,7 @@ import CreateModal from "./CreateModal";
 import FarmStandService from "../Services/FarmStandService";
 import { useAuth } from "../Auth/AuthContext"; // Import the useAuth hook
 
-export default function CreateCard({ updateFarmStand }) {
+export default function CreateCard({ updateFarmStand, triggerRefresh }) {
   const [showModal, setShowModal] = useState(false);
   const { isAuthenticated } = useAuth();
 
@@ -16,6 +16,7 @@ export default function CreateCard({ updateFarmStand }) {
       await FarmStandService().createFarmStand(newFarmStand);
       const updatedData = await FarmStandService().getAllFarmStands();
       updateFarmStand(updatedData);
+      triggerRefresh(); // Trigger refresh in the Home component
     } catch (error) {
       console.error("Error creating farm stand:", error);
     }

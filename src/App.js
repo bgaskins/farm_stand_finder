@@ -17,26 +17,6 @@ import Login from "./Pages/Login";
 - Contain at least 10 components
 - Allow for all CRUD operations
 
-Components: 
-1. Navbar 
-2. FarmStandList
-3. FarmStandCard 
-4. Search Bar 
-5. Map 
-6. Footer 
-7. LoadingSpinner 
-8. Help
-9. FarmStandDetails 
-10. FarmStand
-
-Pages:
-1. Home
-2. FarmStandDetails
-3. About
-
-Services:
-1. FarmStandService
-
 */
 
 export default function App() {
@@ -44,7 +24,7 @@ export default function App() {
 
   return (
     <div className="app">
-      {/* Navbar component for navigation */}
+      {/* Navbar component for navigation with React Router */}
       <AuthProvider>
         <Router>
           <Navbar />

@@ -14,6 +14,7 @@ import CloudHeader from "../Components/CloudHeader";
 
 export default function Home() {
   const [farmStands, setFarmStands] = useState([]);
+  const [refreshKey, setRefreshKey] = useState(0); // State variable to trigger refresh
 
   // useEffect hook is used to fetch farm stand data when the component mounts
   useEffect(() => {
@@ -25,7 +26,12 @@ export default function Home() {
         setFarmStands(data);
       })
       .catch((error) => console.error("Error fetching data:", error)); // Handle errors during the fetch process
-  }, []);
+  }, [refreshKey]); // Refresh key in dependence array
+
+  // Callback function to trigger refresh
+  const triggerRefresh = () => {
+    setRefreshKey((prevKey) => prevKey + 1);
+  };
 
   //========= UPDATE ===========
   // Function to update an existing farm stand
@@ -87,7 +93,10 @@ export default function Home() {
         ))}
       </Row>
       <div className="text-center">
-        <CreateCard updateFarmStand={updateFarmStand} />
+        <CreateCard
+          updateFarmStand={updateFarmStand}
+          triggerRefresh={triggerRefresh}
+        />
       </div>
     </Container>
   );
