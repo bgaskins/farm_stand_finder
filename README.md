@@ -85,4 +85,4 @@ Special thanks to the Promineo Tech Academic Team for providing guidance and sup
 
 ## Video Demo
 
-- [YouTube Video Demo](https://youtu.be/8tSOpw_XyAI)
+[https://youtu.be/8tSOpw_XyAI]
