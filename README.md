@@ -35,22 +35,22 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 1. Clone the repository:
 
-```git clone https://github.com/your-username/farmstand-directory-app.git```
+`git clone https://github.com/your-username/farmstand-directory-app.git`
 
 2. Navigate to the project directory:
 
-```cd farmstand-directory-app```
+`cd farmstand-directory-app`
 
 3. Install dependencies:
 
-```npm install```
+`npm install`
 
 ## Usage
 
 Start the development server:
 
 ```
-npm start 
+npm start
 Open your browser and navigate to http://localhost:3000
 ```
 
@@ -68,7 +68,6 @@ Open your browser and navigate to http://localhost:3000
 |-- ...
 ```
 
-
 ## Technologies Used
 
 React.js
@@ -76,16 +75,14 @@ Bootstrap
 Node.js
 MockAPI for data storage
 
-
-
 ## License
+
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
 ## Acknowledgments
+
 Special thanks to the Promineo Tech Academic Team for providing guidance and support during the development of this project.
 
 ## Video Demo
 
-
-
-
+- [YouTube Video Demo](https://youtu.be/8tSOpw_XyAI)

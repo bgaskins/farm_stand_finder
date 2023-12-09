@@ -32,7 +32,7 @@ export default function FarmStandList() {
 
   // Table of farm stand information
   return (
-    <div>
+    <div style={{ height: "500px", overflow: "scroll" }}>
       <Table responsive>
         <thead>
           <tr>
