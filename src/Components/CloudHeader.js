@@ -1,6 +1,10 @@
 import React from "react";
 
 export default function CloudHeader() {
+  // Cloud and sun graphic with Farm Stand Finder branding
+
+  // Each cloud circle is layered from left to right to form a whole cloud with sun
+
   return (
     <>
       <div

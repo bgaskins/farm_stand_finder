@@ -28,6 +28,8 @@ async function makeRequest(url, method = "GET", data = null) {
   if (data) {
     config.body = JSON.stringify(data);
   }
+  // Start time log
+  console.time(`API Request to ${url}`);
   try {
     // Perform the API request using fetch
     const response = await fetch(url, config);
@@ -36,9 +38,13 @@ async function makeRequest(url, method = "GET", data = null) {
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
+    const result = await response.json();
+
+    //End time log
+    console.timeEnd(`API Request to ${url}`);
 
     // Parse and return the JSON response
-    return response.json();
+    return result;
   } catch (error) {
     // Handle errors during the API request, log the error, and rethrow
     console.error("Error during API request:", error);

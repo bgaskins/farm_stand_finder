@@ -38,7 +38,9 @@ export default function FarmStandModal({
   };
 
   return (
-    <Modal show={show} onHide={onHide}>
+    // Edit, update and delete from modal
+
+    <Modal show={show} onHide={onHide} style={{ color: "#006e5e" }}>
       <Modal.Header closeButton>
         <Modal.Title>Farm Stand Details</Modal.Title>
       </Modal.Header>
@@ -46,6 +48,7 @@ export default function FarmStandModal({
         {editMode ? (
           <Form>
             <Form.Group controlId="formFood">
+              {/* Enter new URL of image address */}
               <Form.Label>Enter Image URL:</Form.Label>
               <Form.Control
                 type="text"
@@ -54,6 +57,7 @@ export default function FarmStandModal({
               />
             </Form.Group>
             <Form.Group controlId="formLocation">
+              {/* Enter new farm stand location city or landmark */}
               <Form.Label>Enter City or Landmark:</Form.Label>
               <Form.Control
                 type="text"
@@ -62,6 +66,7 @@ export default function FarmStandModal({
               />
             </Form.Group>
             <Form.Group controlId="formAddress">
+              {/* Enter new address */}
               <Form.Label>Enter Street Address:</Form.Label>
               <Form.Control
                 type="text"
@@ -69,6 +74,8 @@ export default function FarmStandModal({
                 onChange={(e) => setUpdatedAddress(e.target.value)}
               />
             </Form.Group>
+
+            {/* Update button */}
             <Button variant="primary" onClick={handleUpdate}>
               Update
             </Button>
@@ -76,9 +83,13 @@ export default function FarmStandModal({
         ) : (
           <>
             <p>
+              {" "}
+              {/* Location seen in modal */}
               <strong>Location:</strong> {data.location}
             </p>
             <p>
+              {" "}
+              {/* Address seen in modal */}
               <strong>Address:</strong> {data.address}
             </p>
           </>
@@ -87,14 +98,18 @@ export default function FarmStandModal({
       <Modal.Footer>
         {!editMode && (
           <>
+            {" "}
+            {/* Edit button */}
             <Button variant="secondary" onClick={() => setEditMode(true)}>
               Edit
             </Button>
+            {/* Delete button */}
             <Button variant="danger" onClick={handleDelete}>
               Delete
             </Button>
           </>
         )}
+        {/* Close/cancel button */}
         <Button variant="secondary" onClick={onHide}>
           Close
         </Button>

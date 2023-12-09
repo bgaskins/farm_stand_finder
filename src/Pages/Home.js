@@ -13,7 +13,6 @@ import CloudHeader from "../Components/CloudHeader";
 */
 
 export default function Home() {
-  // State hook to manage the list of farm stands
   const [farmStands, setFarmStands] = useState([]);
 
   // useEffect hook is used to fetch farm stand data when the component mounts

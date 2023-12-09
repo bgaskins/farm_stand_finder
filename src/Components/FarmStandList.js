@@ -16,25 +16,41 @@ export default function FarmStandList() {
       .catch((error) => console.error("Error fetching data:", error));
   }, [farmStandService]);
 
+  const headStyle = {
+    backgroundColor: "#A58767",
+    color: "#ffffff",
+    border: "none",
+  };
+
+  const tdStyle = {
+    backgroundColor: "#e9f4f9",
+    color: "#000000",
+    border: "none",
+    padding: "8px",
+    textAlign: "left",
+  };
+
   // Table of farm stand information
   return (
     <div>
-      <Table striped bordered hover responsive>
+      <Table responsive>
         <thead>
           <tr>
-            <th>Stand Name</th>
-            <th>Location</th>
-            <th>Address</th>
-            <th>Food</th>
+            <th style={headStyle}>Stand Name</th>
+            <th style={headStyle}>Location</th>
+            <th style={headStyle}>Address</th>
+            <th style={headStyle}></th>
           </tr>
         </thead>
         <tbody>
           {farmStands.map((farmStand) => (
             <tr key={farmStand.id}>
-              <td>{farmStand.standName}</td> {/* Farm Stand Name */}
-              <td>{farmStand.location}</td> {/* Location Name */}
-              <td>{farmStand.address}</td> {/* Address Name */}
-              <td>
+              <td style={tdStyle}>{farmStand.standName}</td>{" "}
+              {/* Farm Stand Name */}
+              <td style={tdStyle}>{farmStand.location}</td>{" "}
+              {/* Location Name */}
+              <td style={tdStyle}>{farmStand.address}</td> {/* Address Name */}
+              <td style={tdStyle}>
                 {" "}
                 {/* Farm Stand image */}
                 <img

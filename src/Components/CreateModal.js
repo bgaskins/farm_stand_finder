@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 export default function CreateFarmStandModal({
   showModal,
@@ -20,6 +21,7 @@ export default function CreateFarmStandModal({
 
   const handleCreateFarmStand = () => {
     createFarmStand(newFarmStand);
+    history.push("/"); // Redirects to home
     handleClose();
   };
 

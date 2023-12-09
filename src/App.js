@@ -1,13 +1,15 @@
 import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { AuthProvider } from "./Auth/AuthContext";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faCircle, faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Help from "./Pages/Help";
 import Footer from "./Components/Footer";
 import FarmStandDirectory from "./Pages/FarmStandDirectory";
+import Login from "./Pages/Login";
 
 /* 
 
@@ -41,21 +43,20 @@ export default function App() {
   library.add(faCircle);
 
   return (
-    <Router>
-      <div className="app">
-        {/* Navbar component for navigation */}
-        <Navbar />
-        {/* Switch component to render the first matching Route */}
-        <Switch>
-          {/* Home page component */}
-          <Route path="/" exact component={Home} />
-          {/* Farm Stand Directory component */}
-          <Route path="/farm-stands" exact component={FarmStandDirectory} />
-          {/* Help page component */}
-          <Route path="/help" exact component={Help} />
-        </Switch>
-        <Footer />
-      </div>
-    </Router>
+    <div className="app">
+      {/* Navbar component for navigation */}
+      <AuthProvider>
+        <Router>
+          <Navbar />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/farm-stands" exact component={FarmStandDirectory} />
+            <Route path="/help" exact component={Help} />
+            <Route path="/login" exact component={Login} />
+          </Switch>
+        </Router>
+      </AuthProvider>
+      <Footer />
+    </div>
   );
 }

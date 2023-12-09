@@ -45,6 +45,7 @@ export default function FarmStandEdit({
       {editMode ? (
         <Form>
           {/* Input fields for updating the farm stand/food image, location, and address */}
+          {/* Enter the image url address */}
           <Form.Group controlId="formFood">
             <Form.Label style={{ fontSize: "12px" }}>
               Enter Image URL:
@@ -57,6 +58,7 @@ export default function FarmStandEdit({
             />
           </Form.Group>
 
+          {/* Enter a city or landmark*/}
           <Form.Group controlId="formLocation">
             <Form.Label style={{ fontSize: "12px" }}>
               Enter City or Landmark:
@@ -69,6 +71,7 @@ export default function FarmStandEdit({
             />
           </Form.Group>
 
+          {/* Enter street address of farm stand */}
           <Form.Group controlId="formAddress">
             <Form.Label style={{ fontSize: "12px" }}>
               Enter Street Address:
@@ -81,13 +84,15 @@ export default function FarmStandEdit({
             />
           </Form.Group>
 
-          {/* UPDATE And CANCEL choice */}
+          {/* Update button */}
           <Button
             style={{ marginTop: "10px", backgroundColor: "#006e5e" }}
             onClick={handleUpdate}
           >
             Update
           </Button>
+
+          {/* Cancel button */}
           <Button
             style={{
               marginTop: "10px",
@@ -101,13 +106,14 @@ export default function FarmStandEdit({
         </Form>
       ) : (
         <>
-          {/* EDIT and DELETE*/}
+          {/* Edit button*/}
           <Button
             style={{ marginTop: "24px", backgroundColor: "#006e5e" }}
             onClick={() => setEditMode(true)}
           >
             Edit
           </Button>
+          {/* Delete button */}
           <Button
             style={{
               marginTop: "24px",

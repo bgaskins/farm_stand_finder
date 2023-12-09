@@ -2,22 +2,31 @@ import React, { useState } from "react";
 import { Card, Button } from "react-bootstrap";
 import CardContent from "./CardContent";
 import FarmStandModal from "./FarmStandModal";
-import FarmStandEdit from "./FarmStandEdit";
 
 export default function FarmStandCard({
   data,
   updateFarmStand,
   deleteFarmStand,
 }) {
+  const [isHovered, setIsHovered] = useState(false);
   const [modalShow, setModalShow] = useState(false);
+
+  const buttonStyle = {
+    marginTop: "auto",
+    border: "none",
+    backgroundColor: isHovered ? "#A58767" : "#dc5a23",
+    transition: "backgroundColor 0.3s ease",
+  };
+
   console.log("FarmStandCard Data:", data);
 
   return (
     <Card
       style={{
         width: "20rem",
-        height: "25rem",
+        height: "23rem",
         margin: "10px",
+        right: "20px",
         borderRadius: "10px 10px 10px 10px",
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
         backgroundColor: "#e9f4f9",
@@ -38,11 +47,9 @@ export default function FarmStandCard({
       modal with edit/update/delete operations*/}
         <Button
           variant="secondary"
-          style={{
-            marginTop: "auto",
-            border: "none",
-            backgroundColor: "#dc5a23",
-          }}
+          style={buttonStyle}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
           onClick={() => setModalShow(true)}
         >
           View More
