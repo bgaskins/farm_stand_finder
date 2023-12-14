@@ -49,7 +49,7 @@ export default function Footer() {
       {/* Copyright and developer info */}
       <p
         style={{
-          fontSize: windowWidth <= 768 ? "14px" : "16px",
+          fontSize: windowWidth <= 768 ? "12px" : "16px",
         }}
       >
         Farm Stand Finder | © 2023-2024 | Built by: Bryan Gaskins
