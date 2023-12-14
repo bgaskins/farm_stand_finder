@@ -47,7 +47,13 @@ export default function Footer() {
       ></div>
 
       {/* Copyright and developer info */}
-      <p>Farm Stand Finder | © 2023-2024 | Built by: Bryan Gaskins</p>
+      <p
+        style={{
+          fontSize: windowWidth <= 768 ? "14px" : "16px",
+        }}
+      >
+        Farm Stand Finder | © 2023-2024 | Built by: Bryan Gaskins
+      </p>
 
       {/* Hay Bale 3 */}
       <div
