@@ -11,7 +11,7 @@ export default function Footer() {
         alignItems: "center",
         justifyContent: "center",
         color: "#fff",
-        position: "relative", // Make the footer position relative
+        position: "relative",
       }}
     >
       {/* Hay Bale 1 */}
@@ -25,6 +25,7 @@ export default function Footer() {
           borderRadius: "10px 10px 10px 10px",
           left: "20px",
           top: "10px",
+          display: window.innerWidth <= 768 ? "none" : "block",
         }}
       ></div>
 
@@ -39,6 +40,7 @@ export default function Footer() {
           borderRadius: "10px 10px 10px 10px",
           left: "150px",
           bottom: "20px",
+          display: window.innerWidth <= 768 ? "none" : "block",
         }}
       ></div>
 
@@ -55,6 +57,7 @@ export default function Footer() {
           backgroundColor: "gold",
           borderRadius: "10px 10px 10px 10px",
           right: "20px",
+          display: window.innerWidth <= 768 ? "none" : "block",
         }}
       ></div>
     </footer>

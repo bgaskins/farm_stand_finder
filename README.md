@@ -16,6 +16,14 @@ The Farm Stand App is a web application that allows users to explore and manage 
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
+<img width="500" alt="FarmStandFinder" src="https://github.com/bgaskins/final_proj_unit_sixteen/assets/96695276/9821d499-11ab-456a-909b-55dbaab6f2d9">
+<img width="500" alt="FarmStandFinderFooter" src="https://github.com/bgaskins/final_proj_unit_sixteen/assets/96695276/6aeb3d83-a60c-4de5-bb88-19d1f884590f">
+
+## Demos
+
+View [Live Demo](https://farm-stand-finder.vercel.app/)
+View [YouTube Video Demo](https://youtu.be/8tSOpw_XyAI)
+
 ## Features
 
 - View a list of farm stands with information such as stand name, location, address, and an image of the available food.
@@ -82,7 +90,3 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ## Acknowledgments
 
 Special thanks to the Promineo Tech Academic Team for providing guidance and support during the development of this project.
-
-## Video Demo
-
-[YouTube Video Demo](https://youtu.be/8tSOpw_XyAI)
