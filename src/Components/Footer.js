@@ -1,6 +1,8 @@
 import React from "react";
 
 export default function Footer() {
+  const windowWidth = window.innerWidth;
+
   return (
     <footer
       style={{
@@ -25,7 +27,7 @@ export default function Footer() {
           borderRadius: "10px 10px 10px 10px",
           left: "20px",
           top: "10px",
-          display: window.innerWidth <= 768 ? "none" : "block",
+          display: windowWidth <= 768 ? "none" : "block",
         }}
       ></div>
 
@@ -40,7 +42,7 @@ export default function Footer() {
           borderRadius: "10px 10px 10px 10px",
           left: "150px",
           bottom: "20px",
-          display: window.innerWidth <= 768 ? "none" : "block",
+          display: windowWidth <= 768 ? "none" : "block",
         }}
       ></div>
 
@@ -57,7 +59,7 @@ export default function Footer() {
           backgroundColor: "gold",
           borderRadius: "10px 10px 10px 10px",
           right: "20px",
-          display: window.innerWidth <= 768 ? "none" : "block",
+          display: windowWidth <= 768 ? "none" : "block",
         }}
       ></div>
     </footer>
