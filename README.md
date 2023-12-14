@@ -1,4 +1,5 @@
 # Farm Stand App
+
 <img width="500" alt="FarmStandFinder" src="https://github.com/bgaskins/final_proj_unit_sixteen/assets/96695276/9821d499-11ab-456a-909b-55dbaab6f2d9">
 <img width="500" alt="FarmStandFinderFooter" src="https://github.com/bgaskins/final_proj_unit_sixteen/assets/96695276/6aeb3d83-a60c-4de5-bb88-19d1f884590f">
 
@@ -81,7 +82,10 @@ Open your browser and navigate to http://localhost:3000
 ## Technologies Used
 
 React.js
-Bootstrap
+React Bootstrap
+JavaScript
+HTML
+CSS
 Node.js
 MockAPI for data storage
 
